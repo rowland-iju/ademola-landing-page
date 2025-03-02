@@ -1,43 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glassmorphic Login Page with Bootstrap</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="animation.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/IntersectionObserver/0.9.1/intersection-observer.js"></script>
+<script>
+  // Your JavaScript here
+</script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+
 <body>
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="glass-card p-4 p-md-5 text-center">
-          <h3 class="text-white mb-4">Login</h3>
-          <form id="loginForm">
-            
-            <div class="mb-3 position-relative">
-              <label for="username" class="form-label text-white d-flex justify-content-start">Username</label>
-              <i class="fa-solid fa-user icon"></i>
-              <input type="text" class="form-control glass-input" id="username" placeholder="Enter your username" required>
+  <header>
+    <div class="container-fluid vh-100 hero">
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <!-- Left Content -->
+            <div class="col-12 col-md-8 hero-l">
+              <nav class="navbar navbar-expand-lg m-md-5">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a class="nav-link" href="About">About</a>
+                      <a class="nav-link" href="#">Books</a>
+                      <a class="nav-link" href="#">Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <div class="m-5 hero-l-content text-start">
+                <h1 class="animate__animated animate__fadeInLeft">Discover the magical journey</h1>
+                <p class="animate__animated animate__fadeInUp">
+                  Massa urna magnis dignissim id euismod porttitor vitae etiam viverra at
+                  adipiscing sit morbi aliquet mauris porttitor nisi, senectus pharetra,
+                  ac porttitor orci.
+                </p>
+                <button type="button" class="btn hero-btn animate__animated animate__fadeInUp">Read Sample Now</button>
+                <div class="social-media-icon-mobile justify-content-start ">
+                  <a href="#"><img src="img/facebook (1).png" class="icon" alt="Facebook"></a>
+                  <a href="#"><img src="img/youtube (1).png" class="icon" alt="YouTube"></a>
+                  <a href="#"><img src="img/instagram (1).png" class="icon" alt="Instagram"></a>
+                  <a href="#"><img src="img/gmail.png" class="icon" alt="Gmail"></a>
+                </div>
+              </div>
             </div>
-      
-            <div class="mb-4 position-relative">
-              <label for="password" class="form-label text-white d-flex justify-content-start">Password</label>
-              <i class="fa-solid fa-lock icon"></i>
-              <input type="password" class="form-control glass-input" id="password" placeholder="Enter your password" required>
+  
+            <!-- Right Content-->
+            <div class="col-md-4 hero-r slide d-none d-md-block">
+              <div class="social-media-icon justify-content-end align-items-center g-5 m-5">
+                <a href="#"><img src="img/facebook (1).png" class="icon" alt="Facebook"></a>
+                <a href="#"><img src="img/youtube (1).png" class="icon" alt="YouTube"></a>
+                <a href="#"><img src="img/instagram (1).png" class="icon" alt="Instagram"></a>
+                <a href="#"><img src="img/gmail.png" class="icon" alt="Gmail"></a>
+              </div>
             </div>
-      
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-          </form>
-          <!-- <p class="text-white mt-3">Don't have an account? <a href="#" class="text-primary">Sign up</a></p> -->
+          </div>
         </div>
       </div>
+    </div>
+  </header>
+  
+  
 
-  <!-- Bootstrap JS (Optional) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
-  <script src="script.js"></script>
-</body>
+    <!-- INTRODUCTION SECTION -->
+    <section>
+      <div class="row vh-90">
+        <div class="container-fluid intro">
+          <div class="m-3 m-md-5">
+            <!-- Heading: Making it responsive -->
+            <h1 class="display-4 text-center text-md-center animate__animated animate__fadeInDown">Welcome to the World .</h1>
+            
+            <!-- Paragraph: Adjust text size on small screens -->
+            <p class="lead text-center text-md-center animate__animated animate__fadeInUp">
+              Egestas gravida erat enim ac morbi at malesuada arcu habitant blandit pulvinar 
+              tellus consectetur mi at suscipit sit sit pulvinar amet convallis imperdiet pretium, 
+              egestas scelerisque imperdiet duis aenean turpis dui scelerisque sit massa semper risus, 
+              vitae volutpat sodales eget. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Nihil maiores, amet minus sit, eos repudiandae dolore illo voluptatum fugit iure 
+              commodi ratione culpa repellendus doloremque corporis nesciunt tenetur totam tempore.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- END OF INTRODUCTION SECTION -->
+
+     <!-- ABOUT SECTION -->
+<div class="row min-vh-100 align-items-center About">
+  <!-- Column with Image -->
+  <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+    <img src="img/pexels-olly-3769021.jpg" class="my-img img-fluid" alt="author's image">
+  </div>
+
+  <!-- Column with Text -->
+  <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center text-md-start p-4">
+    <div class="container">
+      <p class="text-start text-center text-md-start">The story of</p>
+      <h1>Author's Name</h1>
+      <p>
+        Diam, urna, ornare leo facilisis suspendisse eu rutrum id augue cursus tincidunt nisl 
+        eget ornare pharetra ac pharetra, pulvinar ipsum sed amet diam morbi amet cursus blandit 
+        augue feugiat arcu aliquet egestas id diam rhoncus, mollis arcu pharetra quis duis morbi a 
+        nunc diam mauris ut tortor ipsum.
+      </p>
+    </div>
+    
+
+    <!-- Counter Section -->
+    <div class="border mt-4 w-100"></div>
+
+    <div class="Counter d-flex justify-content-center align-items-center flex-wrap mt-3">
+      <div class="count-item text-center m-3">
+        <p class="number" data-count="12">0</p>
+        <p class="info">Books Published</p>
+      </div>
+
+      <div class="count-item text-center m-3">
+        <p class="number" data-count="8">0</p>
+        <p class="info">Best Selling Books</p>
+      </div>
+    </div>
+
+    <div class="border mt-2 w-100"></div>
+  </div>
+</div>  <!-- END OF ABOUT SECTION -->
+
+<!-- BOOKS SECTION -->
+<div class="container books my-3">
+  <div class="row books">
+    <h1 class="text-center mb-4">Best Selling Books</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <!-- Book Card 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/Design by DesignDusk 1.jpg" class="card-img-top books-img" alt="Book Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to additional content. 
+              This content is a little bit longer.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-center align-items-center">
+            <small class="text-muted">
+              <button class="order-copy-btn" onclick="window.location.href='#';">Order Your Copy</button>
+            </small>
+          </div>
+
+        </div>
+      </div>
+      <!-- Book Card 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/Design by DesignDusk2.jpg" class="card-img-top books-img" alt="Book Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to additional content.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-center align-items-center">
+            <small class="text-muted">
+              <button class="order-copy-btn" onclick="window.location.href='#';">Order Your Copy</button>
+            </small>
+          </div>
+        </div>
+      </div>
+      <!-- Book Card 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/Design by DesignDusk 3.jpg" class="card-img-top books-img" alt="Book Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to additional content.
+              This card has even longer content than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-center align-items-center">
+            <small class="text-muted">
+              <button class="order-copy-btn" onclick="window.location.href='#';">Order Your Copy</button>
+            </small>
+          </div>
+        </div>
+      </div>
+      <!-- Book Card 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/design 4.jpg" class="card-img-top books-img" alt="Book Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to additional content.
+              This card has even longer content than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-center align-items-center">
+            <small class="text-muted">
+              <button class="order-copy-btn" onclick="window.location.href='#';">Order Your Copy</button>
+            </small>
+          </div>
+        </div>
+      </div>
+      <!-- Book Card 5 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/design 5.jpg" class="card-img-top books-img" alt="Book Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to additional content.
+              This card has even longer content than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-center align-items-center">
+            <small class="text-muted">
+              <button class="order-copy-btn" onclick="window.location.href='#';">Order Your Copy</button>
+            </small>
+          </div>
+        </div>
+      </div>
+      <!-- Book Card 6 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/design 6.jpg" class="card-img-top books-img" alt="Book Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to additional content.
+              This card has even longer content than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-center align-items-center">
+            <small class="text-muted">
+              <button class="order-copy-btn" onclick="window.location.href='#';">Order Your Copy</button>
+            </small>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div> <!-- END OF BOOKS SECTION -->
+
+<!-- QUOTE SECTION -->
+<div class="row mt-5">
+  <div class="col-12 d-flex justify-content-center align-items-center quote">
+    <h1 id="typewriter" class="text-center text-white"></h1>
+  </div>
+</div>
+
+<!-- SPECIAL COPY -->
+ <div class="container">
+<div class="row min-vh-100 align-items-center">
+  <!-- Column with Text -->
+  <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center text-md-start p-4">
+    <div class="container">
+      <p class="text-start text-center text-md-start">Dont miss it</p>
+      <h1>Get a Signed Copy – A Unique Experience</h1>
+      <p>
+        In the heart of every story lies a journey—one of discovery, emotion, and connection. 
+        [Your Book Title] is more than just words on a page; it's a reflection of experiences, 
+        reflections, and insights gathered over time. Each copy is a testament to dedication, 
+        creativity, and passion, crafted with meticulous care to offer readers an immersive and 
+        unforgettable reading experience.
+      </p>
+    </div>
+    <div class="border mt-4 w-100"></div>
+    <div class="border mt-2 w-100"></div>
+  </div>
+
+  <!-- Column with Image -->
+  <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+    <img src="img/pexels-olly-3769021.jpg" class="my-img img-fluid" alt="author's image">
+  </div>
+</div>
+
+</div> <!-- END OF QUOTE SECTION -->
+     
+<!-- SUBSCRIBERS SECTION -->
+
+
+<div class="row vh-90 justify-content-center">
+  <div class="subscribe text-center">
+    <h1 class="mb-4">Get all the latest news and info sent to your inbox.</h1>
+
+    <!-- Email Input -->
+    <div class="d-flex justify-content-center mb-3">
+      <form class="form-floating w-100" style="max-width: 400px;">
+        <input 
+          type="email" 
+          class="form-control" 
+          id="floatingInputValue" 
+          placeholder="Your Email Address"
+        >
+        <label for="floatingInputValue">Your Email Address</label>
+      </form>
+    </div>
+
+    <!-- Subscribe Button -->
+    <button class="btn btn-outline-dark d-inline-flex align-items-center gap-2">
+      Subscribe
+    </button>
+  </div>
+</div>
+
+
+
+<!-- <div class="row min-vh-100 align-items-center">
+  <div class="subscribe text-center">
+    <h1 class="mb-4">Get all the latest news and info sent to your inbox.</h1> -->
+
+    <!-- Email Input -->
+    <!-- <div class="d-flex justify-content-center mb-3">
+      <form class="form-floating w-100" style="max-width: 400px;">
+        <input 
+          type="email" 
+          class="form-control" 
+          id="floatingInputValue" 
+          placeholder="Your Email Address"
+        >
+        <label for="floatingInputValue">Your Email Address</label>
+      </form>
+    </div> -->
+
+    <!-- Subscribe Button -->
+    <!-- <button class="btn btn-outline-dark d-inline-flex align-items-center gap-2">
+      Subscribe <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+</div> -->
+
+
+
+
+<footer class="text-center text-dark py-3 mb-5 vh-90">
+  <div class="container d-flex justify-content-center align-items-center g-5">
+    <div class="mx-5">
+      <p class="mb-0">Copyright © 2025 Bestselling Author</p>
+    </div>
+    <div class="social-icons d-flex justify-content-center justify-content-md-center mx-5">
+      <a href="#"><img src="img/facebook (1).png" class="bottom-icon" alt="Facebook"></a>
+      <a href="#"><img src="img/youtube (1).png" class="bottom-icon" alt="YouTube"></a>
+      <a href="#"><img src="img/instagram (1).png" class="bottom-icon" alt="Instagram"></a>
+      <a href="#"><img src="img/gmail.png" class="bottom-icon" alt="Gmail"></a>
+    </div>
+  </div>
+
+  
+</footer>
+
+
+    
+      <script src="main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
 </html>

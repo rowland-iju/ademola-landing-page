@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 3D Carousel Container */
+.carousel-3d {
+  perspective: 1000px;
+  width: 400px; /* Set the width of the carousel */
+  height: 400px; /* Set the height of the carousel */
+  position: relative;
+  margin: 50px auto;
+}
+
+/* Rotating Box */
+.carousel-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 1s ease;
+}
+
+/* Individual Slides */
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Makes the background cover the entire slide */
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow effect */
+}
+
+/* Slide Positions */
+.carousel-item:nth-child(1) {
+  transform: rotateY(0deg) translateZ(200px);
+}
+
+.carousel-item:nth-child(2) {
+  transform: rotateY(120deg) translateZ(200px);
+}
+
+.carousel-item:nth-child(3) {
+  transform: rotateY(240deg) translateZ(200px);
+}
+
+/* Social Media Icons */
+.social-media-icon {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icon a {
+  display: inline-block;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+
+    </style>
+</head>
+<body>
+  <div class="carousel-3d">
+    <div class="carousel-box">
+      <!-- Slide 1 -->
+      <div class="carousel-item" style="background-image: url('img/coffee.jpg');">
+        <div class="social-media-icon">
+          <a href="#"><img src="img/facebook (1).png" class="icon" alt="Facebook"></a>
+          <a href="#"><img src="img/youtube (1).png" class="icon" alt="YouTube"></a>
+          <a href="#"><img src="img/instagram (1).png" class="icon" alt="Instagram"></a>
+          <a href="#"><img src="img/gmail.png" class="icon" alt="Gmail"></a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="background-image: url('img/coffee.jpg');">
+        <div class="social-media-icon">
+          <a href="#"><img src="img/twitter.png" class="icon" alt="Twitter"></a>
+          <a href="#"><img src="img/linkedin.png" class="icon" alt="LinkedIn"></a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="background-image: url('img/coffee.jpg');">
+        <div class="social-media-icon">
+          <a href="#"><img src="img/snapchat.png" class="icon" alt="Snapchat"></a>
+          <a href="#"><img src="img/pinterest.png" class="icon" alt="Pinterest"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      
+    
+  <script>
+  const carouselBox = document.querySelector('.carousel-box');
+  let currentAngle = 0;
+
+  // Function to rotate the carousel
+  const rotateCarousel = (direction) => {
+    currentAngle += direction === 'next' ? -120 : 120;
+    carouselBox.style.transform = `rotateY(${currentAngle}deg)`;
+  };
+
+  // Automatically rotate the carousel every 3 seconds
+  setInterval(() => rotateCarousel('next'), 3000);
+
+  </script>
+      
+</body>
+</html>
